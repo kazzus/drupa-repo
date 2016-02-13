@@ -1,1 +1,43 @@
+<?php
+/**
+* @file
+* A description of what your module does.
+* this module for adding my-page to navbar menu, clicking on it,
+*  will load new page with one string content
+*/
 
+/**
+ * Implements hook_hook_info().
+ */
+function myModule_hook_info()
+{
+
+}
+
+/**
+ * Implements hook_api_version().
+ */
+function myModule_api_version()
+{
+
+}
+/**
+ * Implements hook_menu().
+ */
+function myModule_menu()
+{
+    $items = array();
+
+        $items['my_page'] = array(
+            'title' => 'My page',
+            'page callback' => 'my_first_page',
+            'access callback' => TRUE,
+            'menu_name' => 'main-menu'
+        );
+
+    return $items;
+}
+
+function my_first_page() {
+    return t('Hello world!');
+}
