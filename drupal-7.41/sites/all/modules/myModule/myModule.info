@@ -1,0 +1,5 @@
+; &Id:$
+name = My Module
+description = A description of what your module does.
+version = 7.x-dev
+core = 7.x
